@@ -1,0 +1,243 @@
+:root {
+    --dark: #0f2044;
+    --yellow: #cc8800;
+    --light: #bec0c2;
+    --poster: white;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  }
+  
+  html {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+  }
+  
+  body {
+    background: black;
+    margin: 30px 50px;
+  }
+  
+  .button {
+    background: white;
+    color: black;
+    padding: 0.6em 1.3em;
+    text-decoration: none;
+    border: 0;
+    border-radius: 2px;
+  }
+
+  .button a:hover {
+    border-color: #80bfff;
+    color: #80bfff;
+  }
+
+  .btn {
+    background:white;
+    color: black;
+    padding: 0.6em 1.3em;
+    text-decoration: none;
+    border: 0;
+    border-radius: 2px;
+  }
+  img {
+    max-width: 100%;
+  }
+  
+  .wrapper {
+    display: grid;
+    grid-gap: 20px;
+  }
+  
+  .navigation ul {
+    display: grid;
+    grid-gap: 20px;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .navigation a {
+    background: white;
+    display: block;
+    text-decoration: none;
+    padding: 0.8em;
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    box-shadow: var(--shadow);
+  }
+  
+  .navigation a:hover {
+    border-color: #80bfff;
+    color: #80bfff;
+  }
+  
+  .banner {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+      'poster poster banner-box1'
+      'poster poster banner-box2';
+  }
+  
+  .poster {
+    grid-area: poster;
+    min-height: 400px;
+    background: url(../images/posterpic.webp) center center / cover;
+    background-size: cover;
+    background-position: center;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    box-shadow: var(--shadow);
+  }
+  
+  .poster h1 {
+    font-size: 2em;
+    margin-bottom: 0;
+    color: var(--poster);
+  }
+  
+  .poster p {
+    font-size: 1.3em;
+    margin-top: 0;
+    color: var(--poster);
+  }
+  
+  .banner-box {
+    background: var(--dark);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    box-shadow: var(--shadow);
+    padding: 1.5em;
+  }
+  
+  .banner-box1 {
+    grid-area: banner-box1;
+    background: url(../images/studentpic.jpg) center center / cover;
+    color: white;
+  }
+  
+  .banner-box2 {
+    grid-area: banner-box2;
+    background: url(../images/vipcard.jpeg) center center / cover;
+    color: white;
+  }
+  
+  .info-box {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  .info {
+    background: var(--dark);
+    text-align: center;
+    padding: 1.5em 2em;
+    box-shadow: var(--shadow);
+    background-color: white;
+  }
+
+  #spec1 {
+    background: url(../images/spec4.jpeg) center center / cover;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 200px;
+  }
+
+  #spec2 {
+    background: url(../images/spec2.png) center center / cover;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 200px;
+  }
+
+
+  #spec3 {
+    background: url(../images/spec3.webp) center center / cover;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 200px;
+  }
+
+
+  #spec4 {
+    background: url(../images/spec1.webp) center center / cover;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 200px;
+  }
+  
+  .details {
+    background: var(--dark) center center / cover;
+    background-color: white;
+    box-shadow: var(--shadow);
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    background: url(../images/investment1.webp) center center / cover;
+    color: white;
+    font-size: 1em;
+    font-weight: 200px;
+    padding: 3rem;
+    
+  }
+  
+  .details-side{
+    display: grid;
+    padding: 2em;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  
+  footer {
+    margin-top: 2em;
+    background: white;
+    color: black;
+    text-align: center;
+    padding: 1em;
+  }
+  
+  
+  /* Media Queries */
+  @media (max-width: 700px) {
+    .banner {
+      grid-template-areas:
+        'poster poster'
+        'banner-box1 banner-box2';
+    }
+  
+    .poster h1 {
+      font-size: 2em;
+    }
+  
+    .navigation ul {
+      grid-template-columns: 1fr;
+    }
+  
+    .details {
+      grid-template-columns: 1fr;
+    }
+  
+    .details .button {
+      display: block;
+      text-align: center;
+      margin: auto;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .banner {
+      grid-template-areas:
+        'poster'
+        'banner-box1'
+        'banner-box2';
+    }
+  }
+  
